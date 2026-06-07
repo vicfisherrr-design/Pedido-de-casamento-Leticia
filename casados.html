@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Casados</title>
+
+<style>
+body{
+    background:linear-gradient(#ffe6ee,#fff);
+    font-family:Arial;
+    text-align:center;
+    padding:50px;
+    overflow:hidden;
+}
+
+h1{
+    color:#d63384;
+    font-size:50px;
+}
+
+p{
+    font-size:22px;
+}
+
+.coracao{
+    position:fixed;
+    top:-20px;
+    font-size:25px;
+    animation:cair 5s linear infinite;
+}
+
+@keyframes cair{
+    from{
+        transform:translateY(-20px);
+    }
+    to{
+        transform:translateY(110vh);
+    }
+}
+</style>
+</head>
+<body>
+
+<h1>🎉 CASAMENTO APROVADO 🎉</h1>
+
+<h2 id="nome"></h2>
+
+<p>
+Certificamos oficialmente que este casamento foi aprovado
+pelo Conselho Supremo do Amor ❤️
+</p>
+
+<p>
+Obrigado por fazer parte da minha vida.
+</p>
+
+<p>
+Você transformou momentos comuns em memórias especiais,
+trouxe felicidade para os dias difíceis e tornou minha vida
+muito melhor simplesmente por existir.
+</p>
+
+<h2>Eu te amo ❤️</h2>
+
+<p>
+Status do relacionamento:
+<br><br>
+████████████████████ 100%
+</p>
+
+<p>
+Esposa instalada com sucesso ❤️
+</p>
+
+<script>
+const assinatura =
+localStorage.getItem("assinatura");
+
+if(assinatura){
+    document.getElementById("nome").innerHTML =
+    assinatura + " ❤️";
+}
+
+for(let i=0;i<30;i++){
+
+    const heart =
+    document.createElement("div");
+
+    heart.className = "coracao";
+    heart.innerHTML = "❤️";
+
+    heart.style.left =
+    Math.random()*100 + "vw";
+
+    heart.style.animationDelay =
+    Math.random()*5 + "s";
+
+    document.body.appendChild(heart);
+}
+</script>
+
+</body>
+</html>

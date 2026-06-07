@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Contrato Oficial </title>
+
+<style>
+body{
+    background:#fefefe;
+    font-family:Arial;
+    max-width:900px;
+    margin:auto;
+    padding:40px;
+}
+
+h1{
+    text-align:center;
+    color:#d63384;
+}
+
+input{
+    width:100%;
+    padding:15px;
+    font-size:18px;
+    margin-top:10px;
+}
+
+button{
+    margin-top:20px;
+    padding:15px 30px;
+    border:none;
+    border-radius:10px;
+    background:#28a745;
+    color:white;
+    font-size:18px;
+}
+
+.erro{
+    color:red;
+}
+</style>
+</head>
+<body>
+
+<h1>📜 Contrato Oficial de Casamento</h1>
+
+<p>
+Eu, Leticia, declaro que:
+</p>
+
+<ul>
+<li> Concordo em construir memórias incríveis juntos.</li>
+<li> Concordo em enfrentar desafios em equipe.</li>
+<li> Concordo em colecionar viagens, histórias e fotos.</li>
+<li> Concordo em cultivar amor todos os dias.</li>
+<li> Concordo em compartilhar felicidade e companheirismo.</li>
+</ul>
+
+<label><b>Assinatura da noiva:</b></label>
+
+<input type="text" id="assinatura"
+placeholder="Digite seu nome aqui ">
+
+<p class="erro" id="erro"></p>
+
+<button onclick="assinar()">
+Assinar Contrato 
+</button>
+
+<script>
+function assinar(){
+
+    const assinatura =
+    document.getElementById("assinatura").value.trim();
+
+    if(assinatura === ""){
+        document.getElementById("erro").innerText =
+        "O departamento jurídico exige uma assinatura";
+        return;
+    }
+
+    localStorage.setItem("assinatura", assinatura);
+
+    window.location.href = "casados.html";
+}
+</script>
+
+</body>
+</html>
